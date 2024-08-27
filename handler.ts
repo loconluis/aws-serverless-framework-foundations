@@ -1,4 +1,11 @@
-const hello = async (event, context) => {
+import type {
+  Context,
+  APIGatewayProxyStructuredResultV2,
+  APIGatewayProxyEventV2,
+  Handler,
+} from 'aws-lambda';
+
+const hello = async (event: APIGatewayProxyEventV2, contex: Context) => {
   const hour = new Date().getHours();
   const minute = new Date().getMinutes();
   const second = new Date().getSeconds();
